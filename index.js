@@ -54,3 +54,7 @@ function animate() {
 }
 
 animate()
+
+window.addEventListener('keydown', () => {
+  console.log(event)
+})
