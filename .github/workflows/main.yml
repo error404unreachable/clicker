@@ -2,8 +2,7 @@
   uses: actions/platformer
     
 - name: Main Workflow
-  run: npm publish
-    
+  run: npm publish    
 steps:
 - run: npm publish
   if: github.event_name == 'push'
