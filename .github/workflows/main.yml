@@ -1,7 +1,17 @@
+- name: Main Workflow
+  uses: actions/platformer
+    
+- name: Main Workflow
+  run: npm publish
+    
+steps:
+- run: npm publish
+  if: github.event_name == 'push'
+  
 jobs:
   my_job:
-    name: deploy to staging
-    runs-on: ubuntu-18.04
+    name: Main Workflow
+    runs-on: ubuntu-latest
     
 on:
   push:
