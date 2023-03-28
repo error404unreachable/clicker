@@ -1,8 +1,8 @@
 # This project is an experiment on physics in Javascript.
 People are encouraged to help and add on to this project.
 For all who contribute to this project, thank you.<br>
------------------------------------------------<br>
-<form>
+-----------------------------------------------
+<!--<form>
 <fieldset>
 <legend>Checklist</legend>
   <label for="p-s">Project Setup: </label>
@@ -22,4 +22,4 @@ For all who contribute to this project, thank you.<br>
 <input type="checkbox" name="v-c-p"><br>
 <input type="checkbox" name="n-s"><br>
 </fieldset>
-</form>
+</form>-->
