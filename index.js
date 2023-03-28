@@ -5,4 +5,4 @@ canvas.width = 1024
 canvas.height = 576
 
 c.fillStyle = 'white'
-c.fillRect(10, 10, 50, 50)
+c.fillRect(0, 0, canvas.width, canvas.height)
