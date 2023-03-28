@@ -19,3 +19,16 @@ var joy = new JoyStick('joyDiv',{
     autoReturnToCenter: true
     
 });
+var Joy = new JoyStick('joyDiv', {}, function(stickData) {
+    joy1IinputPosX.value = stickData.xPosition;
+    joy1InputPosY.value = stickData.yPosition;
+    joy1Direzione.value = stickData.cardinalDirection;
+    joy1X.value = stickData.x;
+    joy1Y.value = stickData.y;
+});
+
+joy.GetPosX();
+joy.GetPosY();
+joy.GetDir();
+joy.GetX();
+joy.GetY();
