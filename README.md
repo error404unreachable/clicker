@@ -5,8 +5,11 @@ For all who contribute to this project, thank you.<br>
 <form>
 <fieldset>
 <legend>Checklist</legend>
+  <label for="p-s">Project Setup: </label>
 <input type="checkbox" name="p-s"><br>
-<input type="checkbox" name="g"><br>
+  <label for="g">Gravity: </label>
+<input type="checkbox" name="g"><br> 
+  <label for="p-s"></label>
 <input type="checkbox" name="p-m"><br>
 <input type="checkbox" name="b-s"><br>
 <input type="checkbox" name="c-b"><br>
