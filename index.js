@@ -51,9 +51,6 @@ const keys = {
     pressed: false,},
 }
 
-let y = 100
-let y2 = 100
-
 function animate() {
   window.requestAnimationFrame(animate)
   c.fillStyle = 'white'
