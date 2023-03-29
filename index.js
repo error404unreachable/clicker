@@ -6,6 +6,19 @@ canvas.height = 576
 
 const gravity = 0.5
 
+class Sprite {
+  constructor({position, imageSrc}) {
+    this.position = position
+    this.image = new Image()
+    this.image.src = 
+  }
+
+
+draw() {
+  c.drawImage(this.image, this.position.x, this.position.y)
+}
+}
+
 class Player {
   constructor(position) {
     this.position = position
