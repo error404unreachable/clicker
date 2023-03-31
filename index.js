@@ -10,7 +10,7 @@ class Sprite {
   constructor({position, imageSrc}) {
     this.position = position
     this.image = new Image()
-    this.image.src = 
+    this.image.src = background.png
   }
 
 
