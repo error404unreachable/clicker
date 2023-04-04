@@ -7,11 +7,16 @@ canvas.height = 576
 c.fillStyle = 'white'
 c.fillRect(0, 0, canvas.width, canvas.height)
 
-c.fillStyle = 'red'
-c.fillRect(200, 100, 100, 100)
+let y = 150
 
 function animate() {
-    window.requestAnimationFrame()
+    window.requestAnimationFrame(animate)
+    c.fillStyle = 'white'
+    c.fillRect(0, 0, canvas.width, canvas.height)
+    
+    c.fillStyle = 'red'
+    c.fillRect(200, y, 100, 100)
+    y++
 }
 
-
+animate()
