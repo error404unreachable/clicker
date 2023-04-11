@@ -8,7 +8,7 @@ c.fillStyle = 'white'
 c.fillRect(0, 0, canvas.width, canvas.height)
 
 let y = 150
-
+let y2 = 150
 function animate() {
     window.requestAnimationFrame(animate)
     c.fillStyle = 'white'
