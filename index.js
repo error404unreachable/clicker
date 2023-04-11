@@ -4,13 +4,16 @@ const c = canvas.getContext('2d')
 canvas.width = 1500
 canvas.height = 1000
 
+const gravity = 0.5
 class Player {
-   constructor() {
-      this.position = {
-          x: 0,
-          y: 0,
+   constructor(position) {
+      this.position = position
+      this.velocity = {
+         x: 0,
+         y: 1,
       }
-   }
+      }
+   
     
     draw() {
         c.fillStyle = 'red'
@@ -18,18 +21,28 @@ class Player {
     } 
     
     update() {
-      this.position.y++  
+       this.draw()
+      this.position.y += this.velocity.y
+       this.velocity.y += gravity
     }
 }
 
-c.fillStyle = 'white'
-c.fillRect(0, 0, canvas.width, canvas.height)
+const player = new Player({
+   x: 0,
+   y: 0,
+})
+const player2 = new Player({
+   x: 300,
+   y: 100,
+})
+
 
 function animate() {
     window.requestAnimationFrame(animate)
     c.fillStyle = 'white'
-    c.fillRect(0, 0, canvas.width, canvas.height)
-    
+    c.fillRect(0, 0, canvas.width, canvas.height
+   player.update()
+   player2.update()
 }
 
 animate()
