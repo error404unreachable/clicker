@@ -1,8 +1,14 @@
+var canvas_dom = // make this your canvas DOM element
+canvas_dom.addEventListener("touchstart",  function(event) {event.preventDefault()})
+canvas_dom.addEventListener("touchmove",   function(event) {event.preventDefault()})
+canvas_dom.addEventListener("touchend",    function(event) {event.preventDefault()})
+canvas_dom.addEventListener("touchcancel", function(event) {event.preventDefault()})
+
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1500
-canvas.height = 1000
+canvas.width = 1234
+canvas.height = 600
 
 const gravity = 0.5
 
