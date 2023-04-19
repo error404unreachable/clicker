@@ -58,6 +58,11 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height)
    player.update()
    player2.update()
+   
+   if (keys.d.pressed = true)
+      player.velocity.x = 5
+   else if (keys.a.pressed = true)
+      player.velocity.x = -5
 }
 
 animate()
@@ -65,11 +70,11 @@ animate()
 window.addEventListener('keydown', () => {
    switch (event.key) {
       case 'd':
-       const keys.d.pressed = true,
+       const keys.d.pressed = true
          break 
          
          case 'a':
-        const keys.a.pressed = true,
+        const keys.a.pressed = true
          break
          
          case 'w':
@@ -81,10 +86,10 @@ window.addEventListener('keydown', () => {
 window.addEventListener('keyup', () => {
    switch (event.key) {
       case 'd':
-      keys.d.pressed = false,
+      keys.d.pressed = false
          break 
          case 'a':
-         keys.a.pressed = false,
+         keys.a.pressed = false
          break 
    }
 })
