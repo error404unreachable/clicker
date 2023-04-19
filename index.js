@@ -2,7 +2,7 @@ const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
 canvas.width = 1024
-canvas.height = 656
+canvas.height = 564
 
 const gravity = 0.5
 
@@ -81,10 +81,10 @@ window.addEventListener('keydown', () => {
 window.addEventListener('keyup', () => {
    switch (event.key) {
       case 'd':
-      const  keys.d.pressed = false,
+      keys.d.pressed = false,
          break 
          case 'a':
-     const   keys.a.pressed = false,
+         keys.a.pressed = false,
          break 
    }
 })
