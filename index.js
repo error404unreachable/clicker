@@ -63,6 +63,8 @@ function animate() {
       player.velocity.x = 5
    else if (keys.a.pressed = true)
       player.velocity.x = -5
+   else
+      player.velocity.x = 0
 }
 
 animate()
