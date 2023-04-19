@@ -65,11 +65,11 @@ animate()
 window.addEventListener('keydown', () => {
    switch (event.key) {
       case 'd':
-        keys.d.pressed = true
+       const keys.d.pressed = true,
          break 
          
          case 'a':
-        keys.a.pressed = true
+        const keys.a.pressed = true,
          break
          
          case 'w':
@@ -81,10 +81,10 @@ window.addEventListener('keydown', () => {
 window.addEventListener('keyup', () => {
    switch (event.key) {
       case 'd':
-        keys.d.pressed = false
+      const  keys.d.pressed = false,
          break 
          case 'a':
-        keys.a.pressed = false
+     const   keys.a.pressed = false,
          break 
    }
 })
