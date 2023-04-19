@@ -58,10 +58,6 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height)
    player.update()
    player2.update()
-   
-   player.velocity.x = 0
-   if (key.d.pressed) player.velocity.x = 5
-     else if (keys.a.pressed) player.velocity.x = -5
 }
 
 animate()
@@ -71,9 +67,11 @@ window.addEventListener('keydown', () => {
       case 'd':
         keys.d.pressed = true
          break 
+         
          case 'a':
         keys.a.pressed = true
-         break 
+         break
+         
          case 'w':
        player.velocity.y = -20
          break 
