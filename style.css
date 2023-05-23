@@ -1,1 +1,72 @@
-
+html, body { 
+    width: 100%;
+    height: 1000px;
+    background-image: url("./IMG_2278.jpeg");
+    font-size: 30px;
+    text-align: center;
+  }
+  #button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("IMG_2277.gif");
+    background-size: 170px 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    padding: 80px;
+  }
+  
+  #energy {
+    margin-top: 50px;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #score {
+    position: sticky;
+    top: 0;
+    margin-top: 50px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  html, body {
+    overflow: hidden;
+  }
+  
+  body {
+    position: fixed;
+  }
+  
+  #log {
+    width: 250px;
+    height: 150px;
+    border: 0.25px solid white;
+    border-radius: 10%;
+    padding: 25px;
+    display: block;
+    overflow: scroll;
+    background-color: darkgray;
+    position: absolute;
+    left: auto;
+  }
+  
+  #log-title {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  
+  #log-input {
+    border: 0.1px solid white;
+    border-radius: 10%;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+  }
