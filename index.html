@@ -60,37 +60,6 @@
     counter = + counter + 1;
     document.getElementById('score').innerText = counter;
   };
-  
-  button.addEventListener('dblclick', function(el) {
-  el.preventDefault();
-});
-  
-  button.addEventListener("click", upgradeCost){
-  }
-  
-  function upgradeCost() {
-    if (counter >= 50 && onexused == 0) {
-      let onex = confirm("Do you want to buy an autoclicker? (+5/2 seconds)")
-      if (confirm(onex) == "true") {
-        let onexused = 1;
-        let counter = counter - 50;
-        setInterval(function(){
-          counter += onexval;
-        }, 2000);
-      }
-    }
-      if (counter >= 100 && onexused == 1) {
-        let infinite = confirm("Infinite Autoclicker?");
-        if (confirm(infinite) == "true") {
-          setInterval(function(){
-            counter += infiniteclicks;
-          }, 500);
-        }
-        else {
-          alert("You have ruined the world and started an apocalypse!");
-        }
-      }
-  }
 </script>
 </body>
 </html>
