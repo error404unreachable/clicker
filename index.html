@@ -62,21 +62,23 @@
   };
   
   function checkUpgrades() {
-    if (counter == 50) {
-      setInterval(function(){
-        counter += onex;
-      }, 1000);
-      document.getElementById('score').innerText = counter;
+    if (counter == 10) {
+      setInterval(autoClicker(), 1000);
     }
   }
   
   function checkAlerts() {
-    if (counter == 50) {
+    if (counter == 10) {
       alert("You've been upgraded...");
     }
     else {
       console.log("Waiting for upgrade...");
     }
+  }
+  
+  function autoClicker() {
+    counter += onex;
+    document.getElementById('score').innerText = counter;
   }
 </script>
 </body>
