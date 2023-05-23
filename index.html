@@ -58,14 +58,24 @@
     counter = + counter + 1;
     document.getElementById('score').innerText = counter;
     checkUpgrades();
+    checkAlerts();
   };
   
   function checkUpgrades() {
     if (counter >= 50) {
-      alert("You've been upgraded");
       setInterval(function(){
         counter += onex;
       }, 1000);
+      document.getElementById('score').innerText = counter;
+    }
+  }
+  
+  function checkAlerts() {
+    if (counter == 50) {
+      alert("You've been upgraded...");
+    }
+    else {
+      console.log("Waiting for upgrade...");
     }
   }
 </script>
