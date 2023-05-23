@@ -41,13 +41,13 @@
 </style>
     </head>
     <body>
-<div id="score">0</div>
+      <div>⚡ </div><div id="score">0</div>
 <button id="button" value=" "></button>
 <script>
   let counter = 0;
   
   document.getElementById('button').onclick = () => {
-    counter = "⚡" + counter + 1;
+    counter = + counter + 1;
     document.getElementById('score').innerText = counter;
   };
   
