@@ -53,13 +53,21 @@
 <button id="button" value=" "></button>
 <script>
   let counter = 0;
-  let onexused = 0;
-  let onexval = 5;
-  let infiniteclicks = 100;
+  let onex = 5;
   document.getElementById('button').onclick = () => {
     counter = + counter + 1;
     document.getElementById('score').innerText = counter;
+    checkUpgrades();
   };
+  
+  function checkUpgrades() {
+    if (counter >= 50) {
+      alert("You've been upgraded");
+      setInterval(function(){
+        counter += onex;
+      }, 1000);
+    }
+  }
 </script>
 </body>
 </html>
