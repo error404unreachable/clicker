@@ -55,7 +55,7 @@
     padding: 25px;
     display: block;
     overflow: scroll;
-    background-color: gray;
+    background-color: darkgray;
     position: absolute;
     left: auto;
   }
@@ -64,7 +64,7 @@
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size:20px;
+    font-size: 40px;
   }
   
   #log-input {
@@ -73,6 +73,7 @@
     padding: 5px;
     background-color: black;
     color: white;
+    font-size: 15px;
   }
 </style>
     </head>
@@ -102,7 +103,7 @@
   function checkAlerts() {
     if (counter == 10) {
       alert("You've been upgraded...");
-      document.getElementById("log-input").innerText = "Rank increased to Rank 2 /n /n Achievement Unlocked! Energy Earner, Rank 1 (Earn 10 energy)";
+      document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n \n Achievement Unlocked! Energy Earner, Rank 1 (Earn 10 energy)";
     }
     else {
       console.log("Waiting for upgrade...");
