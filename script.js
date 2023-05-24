@@ -1,5 +1,13 @@
 let counter = 0;
   let onex = 1;
+
+function welcomeUser() {
+  alert("Welcome to Save the Earth...");
+  alert("You have created something that could save the Earth...");
+  alert("Now, start getting energy by tapping the Earth...");
+  alert("Good luck!");
+}
+
   document.getElementById('button').onclick = () => {
     counter = + counter + 1;
     document.getElementById('score').innerText = counter;
