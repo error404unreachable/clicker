@@ -50,9 +50,8 @@ function checkOther() {
         alert("You've unlocked something...");
         document.getElementById("log-input").innerText = "Achievement Unlocked! \n Energy Earner, Rank 2 (Earn 50 energy) \n \n Achievement Unlocked! \n Upgrader, Rank 1 (Upgrade a power plant) \n \n";
         alert("You used your energy to upgrade the power plant. It now produces 2 energy per second.");
-        counter -= 50;
         alert("Your friends and family support you in helping the planet, and fund you with 100 energy...");
-        counter += 100;
+        counter += 50;
       }
   else {
     console.log("Waiting for alerts...");
