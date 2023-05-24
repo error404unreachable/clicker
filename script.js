@@ -1,5 +1,5 @@
 let counter = 0;
-  let onex = 1;
+  let onex = 0.5;
 
 function welcomeUser() {
   alert("Welcome to Save the Earth...");
@@ -21,8 +21,7 @@ function welcomeUser() {
     }
     else {
       if (counter == 50) {
-        myInterval = setInterval(autoClicker, 1000);
-        let onex = += 1;
+        let onex = += 1.5;
       }
     }
   }
@@ -43,7 +42,9 @@ function welcomeUser() {
         alert("Your friends and family support you in helping the planet, and fund you with 100 energy...");
         let counter = counter += 100;
       }
+      else {
       console.log("Waiting for upgrade...");
+      }
     }
   }
   
