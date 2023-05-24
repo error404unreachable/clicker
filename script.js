@@ -17,7 +17,7 @@ function welcomeUser() {
     }
     else {
       if (counter == 50) {
-        clearInterval;
+        clearInterval(myInterval);
         onex = onex += 1;
         myInterval = setInterval(autoClicker, 1000);
       }
