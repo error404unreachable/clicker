@@ -2,6 +2,7 @@ html, body {
     width: 100%;
     height: 1000px;
     background-image: url("./IMG_2278.jpeg");
+    background-size: 1000px 1000px;
     font-size: 30px;
     text-align: center;
   }
