@@ -6,6 +6,8 @@ let onex = 1;
     document.getElementById('score').innerText = counter;
     checkUpgrades();
     checkAlerts();
+    checkMore();
+    checkOther();
   }
   
 function welcomeUser() {
@@ -16,7 +18,6 @@ function welcomeUser() {
       myInterval = setInterval(autoClicker, 2000);
     }
     else {
-      checkMore();
       console.log("Waiting for upgrades...");
     }
   }
@@ -37,10 +38,9 @@ function checkMore() {
       alert("You've unlocked something...");
       document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n Achievement Unlocked! \n Energy Earner, Rank 1 (Earn 10 energy) \n \n";
       alert("You used your energy to restore an old power plant, and now it is producing you 1 energy per 2 seconds.");
-      let counter = counter -= 10;
+      counter -= 10;
     }
     else {
-      checkOther();
       console.log("Waiting for upgrade...");
     }
   }
