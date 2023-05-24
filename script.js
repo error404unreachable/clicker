@@ -1,11 +1,11 @@
 let counter = 0;
   let onex = 0.5;
-  document.getElementById('button').onclick = () => {
+  function addValue() {
     counter = counter + 1;
     document.getElementById('score').innerText = counter;
     checkUpgrades();
     checkAlerts();
-  };
+  }
   
 function welcomeUser() {
   alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
