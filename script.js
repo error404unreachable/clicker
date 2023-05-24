@@ -1,13 +1,5 @@
 let counter = 0;
   let onex = 0.5;
-
-function welcomeUser() {
-  alert("Welcome to Save the Earth...");
-  alert("You have created something that could save the Earth...");
-  alert("Now, start getting energy by tapping the Earth...");
-  alert("Good luck!");
-}
-
   document.getElementById('button').onclick = () => {
     counter = + counter + 1;
     document.getElementById('score').innerText = counter;
@@ -15,6 +7,9 @@ function welcomeUser() {
     checkAlerts();
   };
   
+function welcomeUser() {
+  alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
+}
   function checkUpgrades() {
     if (counter == 10) {
       myInterval = setInterval(autoClicker, 2000);
