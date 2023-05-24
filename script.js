@@ -16,7 +16,7 @@ function welcomeUser() {
     }
     else {
       if (counter == 50) {
-        let onex = += 1.5;
+        let onex = onex += 1.5;
       }
     }
   }
