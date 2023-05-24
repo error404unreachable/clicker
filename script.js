@@ -14,7 +14,7 @@ function welcomeUser() {
 }
 
 function tenEnergy() {
-  if (onexactive  == 0) {
+  if (onexactive == 0) {
     clearInterval(myInterval);
     setInterval(autoClicker, 2000);
     onexactive += 1;
@@ -51,14 +51,15 @@ function fiftyEnergy() {
   }
 
   function checkAlerts() {
-    if (counter == 10) {
-      alert("You've unlocked something...");
-      document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n Achievement Unlocked! \n Energy Earner, Rank 1 (Earn 10 energy) \n \n";
-      alert("You used your energy to restore an old power plant, and now it is producing you 1 energy per 2 seconds.");
-      counter -= 10;
-    }
-    else {
+    switch (counter) {
+      case 10:
+        alert("You've unlocked something...");
+        document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n Achievement Unlocked! \n Energy Earner, Rank 1 (Earn 10 energy) \n \n";
+        alert("You used your energy to restore an old power plant, and now it is producing you 1 energy per 2 seconds.");
+        break;
+      default:
       console.log("Waiting for upgrade...");
+        break;
     }
   }
  
