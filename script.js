@@ -12,12 +12,22 @@ function welcomeUser() {
   alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
 }
   function checkUpgrades() {
-    if (counter == 10) {
-      myInterval = setInterval(autoClicker, 2000);
-      onexactive += 1;
-    }
-    else {
-      console.log("Waiting for upgrades...");
+    switch (counter) {
+      case 10:
+        myInterval = setInterval(autoClicker, 2000);
+       break;
+      case 50:
+        clearInterval(myInterval);
+        onex += 1;
+        myInterval = setInterval(autoClicker, 1000);
+        break;
+      case 150:
+        clearInterval(myInterval);
+        onex += 2;
+        myInterval = setInterval(autoClicker, 1000);
+        break;
+      default:
+        console.log("Waiting for upgrade...");
     }
   }
 
