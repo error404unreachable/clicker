@@ -1,5 +1,6 @@
 let counter = 0;
-  let onex = 0.5;
+let onex = 1;
+
   function addValue() {
     counter = counter + 1;
     document.getElementById('score').innerText = counter;
@@ -36,7 +37,6 @@ function welcomeUser() {
         let counter = counter += 100;
       }*/
       console.log("Waiting for upgrade...");
-      }
     }
   }
   
