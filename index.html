@@ -2,80 +2,7 @@
 <html>
 <head>
   <title>Save the Earth!</title>
-<style>
-  html, body { 
-    width: 100%;
-    height: 1000px;
-    background-image: url("./IMG_2278.jpeg");
-    font-size: 30px;
-    text-align: center;
-  }
-  #button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url("IMG_2277.gif");
-    background-size: 170px 170px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    padding: 80px;
-  }
-  
-  #energy {
-    margin-top: 50px;
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  #score {
-    position: sticky;
-    top: 0;
-    margin-top: 50px;
-    font-size: 60px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-  }
-  
-  html, body {
-    overflow: hidden;
-  }
-  
-  body {
-    position: fixed;
-  }
-  
-  #log {
-    width: 250px;
-    height: 150px;
-    border: 0.25px solid white;
-    border-radius: 10%;
-    padding: 25px;
-    display: block;
-    overflow: scroll;
-    background-color: darkgray;
-    position: absolute;
-    left: auto;
-  }
-  
-  #log-title {
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-  }
-  
-  #log-input {
-    border: 0.1px solid white;
-    border-radius: 10%;
-    padding: 5px;
-    background-color: black;
-    color: white;
-    font-size: 15px;
-  }
-</style>
+<link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
       <h1 id="energy">⚡ <span id="score">0</span></h1>
@@ -84,36 +11,6 @@
         <h1 id="log-title">Log</h1>
         <p id="log-input"></p>
       </div>
-<script>
-  let counter = 0;
-  let onex = 5;
-  document.getElementById('button').onclick = () => {
-    counter = + counter + 1;
-    document.getElementById('score').innerText = counter;
-    checkUpgrades();
-    checkAlerts();
-  };
-  
-  function checkUpgrades() {
-    if (counter == 10) {
-      myInterval = setInterval(autoClicker, 1000);
-    }
-  }
-  
-  function checkAlerts() {
-    if (counter == 10) {
-      alert("You've been upgraded...");
-      document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n \n Achievement Unlocked! Energy Earner, Rank 1 (Earn 10 energy)";
-    }
-    else {
-      console.log("Waiting for upgrade...");
-    }
-  }
-  
-  function autoClicker() {
-    counter += onex;
-    document.getElementById('score').innerText = counter;
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
