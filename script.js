@@ -16,15 +16,22 @@ function welcomeUser() {
       myInterval = setInterval(autoClicker, 2000);
     }
     else {
-      /*if (counter == 50) {
-        clearInterval(myInterval);
-        onex = onex += 1;
-        myInterval = setInterval(autoClicker, 1000);
-      }*/
+      checkMore();
       console.log("Waiting for upgrades...");
     }
   }
   
+function checkMore() {
+  if (counter == 50) {
+    clearInterval(myInterval);
+    onex += 1.5;
+    myInterval = setInterval(autoClicker, 1000);
+  }
+  else {
+    console.log("Waiting for upgrades...");
+  }
+}
+
   function checkAlerts() {
     if (counter == 10) {
       alert("You've unlocked something...");
