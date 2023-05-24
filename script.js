@@ -15,9 +15,7 @@ function welcomeUser() {
       myInterval = setInterval(autoClicker, 2000);
     }
     else {
-      if (counter == 50) {
-        let onex = onex += 1.5;
-      }
+      console.log("Waiting for upgrades...");
     }
   }
   
