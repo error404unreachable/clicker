@@ -1,17 +1,15 @@
-function startChecking() {
 document.getElementById('button').onclick = () => {
     counter = + counter + 1;
     document.getElementById('score').innerText = counter;
     checkUpgrades();
     checkAlerts();
 };
-}
+
   
 function welcomeUser() {
   alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
   var counter = 0;
   var onex = 0.5;
-  startChecking()
 }
   function checkUpgrades() {
     if (counter == 10) {
