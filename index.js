@@ -1,9 +1,13 @@
-document.getElementById('button').onclick = () => {
+let button = document.getElementById('button');
+
+    button.addEventListener("click", addOne);
+
+  function addOne() {
     counter = + counter + 1;
     document.getElementById('score').innerText = counter;
     checkUpgrades();
     checkAlerts();
-};
+  }
 
   
 function welcomeUser() {
