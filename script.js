@@ -16,12 +16,15 @@ function welcomeUser() {
   function checkUpgrades() {
     switch (counter) {
       case 10:
+        document.getElementById("log-input").innerText = "case 10 upgrades";
         if (onexactive == 0) {
+          document.getElementById("log-input").innerText = "upgrades worked?";
     clearInterval(myInterval);
     setInterval(autoClicker, 2000);
     onexactive += 1;
   }
   else {
+    document.getElementById("log-input").innerText = "Nothing yet...";
     console.log("Already recieved!");
   }
         break;
@@ -33,6 +36,7 @@ function welcomeUser() {
     myInterval = setInterval(autoClicker, 1000);
   }
   else {
+    document.getElementById("log-input").innerText = "Nothing yet...";
     console.log("You already have that!");
   }
         break;
@@ -44,10 +48,12 @@ function welcomeUser() {
         newInterval = setInterval(autoClicker, 1000);
         }
         else {
+          document.getElementById("log-input").innerText = "Nothing yet...";
           console.log("You already have that!");
         }
         break;
       default:
+        document.getElementById("log-input").innerText = "Nothing yet...";
         console.log("Waiting for upgrade...");
     }
   }
@@ -55,12 +61,15 @@ function welcomeUser() {
   function checkAlerts() {
     switch (counter) {
       case 10:
+        document.getElementById("log-input").innerText = "Case 10...";
         if (onexactive == 0) {
+          document.getElementById("log-input").innerText = "worked?"
         alert("You've unlocked something...");
         document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n Achievement Unlocked! \n Energy Earner, Rank 1 (Earn 10 energy) \n \n";
         alert("You used your energy to restore an old power plant, and now it is producing you 1 energy per 2 seconds.");
         }
         else {
+          document.getElementById("log-input").innerText = "Nothing yet...";
           console.log("No alerts yet...");
         }
         break;
@@ -74,6 +83,7 @@ function welcomeUser() {
           counter += 100;
         }
         else {
+          document.getElementById("log-input").innerText = "Nothing yet..." ;
           console.log("No alerts yet...");
         }
         break;
