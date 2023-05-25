@@ -16,16 +16,10 @@ function welcomeUser() {
   function checkUpgrades() {
     switch (counter) {
       case 10:
-        document.getElementById("log-input").innerText = "case 10 upgrades";
         if (onexactive == 0) {
-          document.getElementById("log-input").innerText = "upgrades worked?";
     clearInterval(myInterval);
     setInterval(autoClicker, 2000);
     onexactive += 1;
-  }
-  else {
-    document.getElementById("log-input").innerText = "Nothing yet...";
-    console.log("Already recieved!");
   }
         break;
       case 50:
@@ -35,10 +29,6 @@ function welcomeUser() {
     onex += 1;
     myInterval = setInterval(autoClicker, 1000);
   }
-  else {
-    document.getElementById("log-input").innerText = "Nothing yet...";
-    console.log("You already have that!");
-  }
         break;
       case 250:
         if (onexactive == 2) {
@@ -47,13 +37,8 @@ function welcomeUser() {
         onexactive += 1;
         newInterval = setInterval(autoClicker, 1000);
         }
-        else {
-          document.getElementById("log-input").innerText = "Nothing yet...";
-          console.log("You already have that!");
-        }
         break;
       default:
-        document.getElementById("log-input").innerText = "Nothing yet...";
         console.log("Waiting for upgrade...");
     }
   }
@@ -61,16 +46,10 @@ function welcomeUser() {
   function checkAlerts() {
     switch (counter) {
       case 10:
-        document.getElementById("log-input").innerText = "Case 10...";
         if (onexactive == 0) {
-          document.getElementById("log-input").innerText = "worked?"
         alert("You've unlocked something...");
         document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n Achievement Unlocked! \n Energy Earner, Rank 1 (Earn 10 energy) \n \n";
         alert("You used your energy to restore an old power plant, and now it is producing you 1 energy per 2 seconds.");
-        }
-        else {
-          document.getElementById("log-input").innerText = "Nothing yet...";
-          console.log("No alerts yet...");
         }
         break;
       case 50:
@@ -82,10 +61,6 @@ function welcomeUser() {
           alert("Your friends and family support you helping the Earth. They fund you with 100 energy.");
           counter += 100;
         }
-        else {
-          document.getElementById("log-input").innerText = "Nothing yet..." ;
-          console.log("No alerts yet...");
-        }
         break;
       case 250:
         if (onexactive == 2) {
@@ -93,9 +68,6 @@ function welcomeUser() {
           document.getElementById("log-input").innerText = "Rank increased! \n Rank 2 --> Rank 3 \n Achievement Unlocked! \n Energy Earner, Rank 3 (Earn 250 energy) \n Achievement Unlocked! \n Restorer, Rank 1 (Restore 2 power plants) \n \n";
           alert("You restored another power plant!");
           alert("The new power plant produces you 4 energy per second!");
-        }
-        else {
-          console.log("Waiting for alerts...");
         }
         break;
       default:
