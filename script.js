@@ -1,6 +1,7 @@
-var counter = 0;
-var onex = 1;
-var onexactive = 0;
+let counter = 0;
+let onex = 1;
+let onexactive = 0;
+let twox = 4;
 
   function addValue() {
     counter = counter + 1;
@@ -13,24 +14,50 @@ function welcomeUser() {
   alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
 }
 
+function tenUpgrades() {
+  if (onexactive == 0) {
+  clearInterval(myInterval);
+  myInterval = setInterval(autoClicker, 2000);
+  onexactive += 1;
+  }
+  else {
+    console.log("Waiting for upgrades...");
+  }
+}
+
+function fiftyUpgrades() {
+  if (onexactive == 1) {
+  clearInterval(myInterval);
+  onex += 1;
+  myInterval = setInterval(autoClicker, 1000);
+  onexactive += 1;
+  }
+  else {
+    console.log("Waiting for upgrades...");
+  }
+}
+
+function twofiftyUpgrades() {
+  if (onexactive == 2) {
+  clearInterval(newInterval);
+  newInterval = setInterval(secondClicker, 1000);
+  onexactive += 1;
+  }
+  else {
+    console.log("Waiting for upgrades...");
+  }
+}
+
   function checkUpgrades() {
     switch (counter) {
       case 10:
-        clearInterval(myInterval);
-    setInterval(autoClicker, 2000);
-    onexactive += 1;
+        tenUpgrades();
         break;
       case 50:
-    clearInterval(myInterval);
-    onexactive += 1;
-    onex += 1;
-    myInterval = setInterval(autoClicker, 1000);
+      fiftyUpgrades();
         break;
       case 250:
-        clearInterval(newInterval);
-        onex += 2;
-        onexactive += 1;
-        newInterval = setInterval(autoClicker, 1000);
+      twofiftyUpgrades();
         break;
       default:
         console.log("Waiting for upgrade...");
