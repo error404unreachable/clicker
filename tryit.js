@@ -5,15 +5,15 @@ var onexactive = 0;
   function addValue() {
     counter = counter + 1;
     document.getElementById('score').innerText = counter;
-    checkUpgrades();
-    checkAlerts();
+    checkUpgrades(counter);
+    checkAlerts(counter);
   }
   
 function welcomeUser() {
   alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
 }
 
-  function checkUpgrades() {
+  function checkUpgrades(counter) {
     if (counter == 10 && onexactive == 0) {
         clearInterval(myInterval);
     setInterval(autoClicker, 2000);
@@ -36,7 +36,7 @@ function welcomeUser() {
       }
   }
 
-  function checkAlerts() {
+  function checkAlerts(counter) {
     if (counter == 10 && onexactive == 0) {
         alert("You've unlocked something...");
         document.getElementById("log-input").innerText = "Rank increased to Rank 2 \n Achievement Unlocked! \n Energy Earner, Rank 1 (Earn 10 energy) \n \n";
