@@ -16,7 +16,7 @@ function welcomeUser() {
   function checkUpgrades() {
     switch (counter) {
       case 10:
-    clearInterval(myInterval);
+        clearInterval(myInterval);
     setInterval(autoClicker, 2000);
     onexactive += 1;
         break;
