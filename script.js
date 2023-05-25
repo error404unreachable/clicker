@@ -65,7 +65,7 @@ function welcomeUser() {
         }
         break;
       case 50:
-        if(onexactive == 1) {
+        if (onexactive == 1) {
           alert("You've unlocked something...");
           document.getElementById("log-input").innerText = "2 achievements unlocked! \n Energy Earner, Rank 2 (Earn 50 energy), \n Upgrader, Rank 1 (Upgrade any power plant) \n \n";
           alert("You used your energy to upgrade the power plant.");
