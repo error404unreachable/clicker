@@ -7,7 +7,19 @@ let log = document.getElementById("log-input");
   function addValue() {
     counter = counter + 1;
     document.getElementById('score').innerText = counter;
-    checkUpgrades();
+    switch (counter) {
+      case 10:
+        tenUpgrades();
+        break;
+      case 50:
+      fiftyUpgrades();
+        break;
+      case 250:
+      twofiftyUpgrades();
+        break;
+      default:
+        console.log("Waiting for upgrade...");
+    }
     checkAlerts();
   }
   
@@ -49,22 +61,6 @@ function twofiftyUpgrades() {
   }
 }
 
-  function checkUpgrades() {
-    switch (counter) {
-      case 10:
-        tenUpgrades();
-        break;
-      case 50:
-      fiftyUpgrades();
-        break;
-      case 250:
-      twofiftyUpgrades();
-        break;
-      default:
-        console.log("Waiting for upgrade...");
-    }
-  }
-
 function tenAlerts() {
  if (onexactive == 0) {
   alert("You've unlocked something...");
@@ -104,20 +100,9 @@ function twofiftyAlerts() {
   }
 }
 
-  function checkAlerts() {
-    switch (counter) {
-      case 10:
-        tenAlerts();
-        break;
-      case 50:
-          fiftyAlerts();
-        break;
-      case 250:
-          twofiftyAlerts();
-        break;
-      default:
-      console.log("Waiting for alerts...");
-    }
+  function secondClicker() {
+    counter += twox;
+    document.getElementById('score').innerText = counter;
   }
  
   function autoClicker() {
