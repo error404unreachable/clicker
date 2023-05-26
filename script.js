@@ -18,11 +18,27 @@ let log = document.getElementById("log-input");
       twofiftyUpgrades();
         break;
       default:
-        console.log("Waiting for upgrade...");
+        checkAlerts();
     }
     checkAlerts();
   }
   
+function checkAlerts() {
+  switch (counter) {
+      case 10:
+        tenAlerts();
+        break;
+      case 50:
+          fiftyAlerts();
+        break;
+      case 250:
+          twofiftyAlerts();
+        break;
+      default:
+      console.log("Waiting for alerts...");
+    }
+}
+
 function welcomeUser() {
   alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
 }
