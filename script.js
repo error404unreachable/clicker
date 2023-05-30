@@ -6,7 +6,7 @@ let twox = 4;
 let log = document.getElementById("log-input");
 let element = document.getElementById("button");
 
-element.addEventListener("click", addScore)
+element.addEventListener("click", addScore);
 
 function addScore() {
     counter = counter + 1;
