@@ -4,12 +4,16 @@ let onexactive = 0;
 let onexactivated = 0;
 let twox = 4;
 let log = document.getElementById("log-input");
+let element = document.getElementById("button");
 
-document.getElementById("button").onclick = () => {
+element.addEventListener("click", addScore)
+
+function addScore() {
     counter = counter + 1;
     document.getElementById('score').innerText = counter;
   checkUpgrades();
-};
+}
+
 
 function checkUpgrades() {
     switch (counter) {
