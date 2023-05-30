@@ -1,12 +1,17 @@
 let counter = 0;
 let onex = 1;
 let onexactive = 0;
+let onexactivated = 0;
 let twox = 4;
 let log = document.getElementById("log-input");
 
-  function addValue() {
+document.getElementById("button").onclick = () => {
     counter = counter + 1;
     document.getElementById('score').innerText = counter;
+  checkUpgrades();
+}
+
+function checkUpgrades() {
     switch (counter) {
       case 10:
         tenUpgrades();
@@ -22,6 +27,7 @@ let log = document.getElementById("log-input");
     }
     checkAlerts();
   }
+}
   
 function checkAlerts() {
   switch (counter) {
@@ -78,11 +84,12 @@ function twofiftyUpgrades() {
 }
 
 function tenAlerts() {
- if (onexactive == 0) {
+ if (onexactivated == 0) {
   alert("You've unlocked something...");
    log.innerText = "Rank increased to Rank 2 \n Achievement Unlocked! \n Energy Earner, Rank 1 (Earn 10 energy) \n \n";
    alert("You used your energy to restore an old power plant, and now it's producing you 1 energy per 2 seconds.");
    counter -= 10;
+   onexactivated += 1;
  }
   else {
     console.log("Waiting for alerts");
@@ -90,13 +97,14 @@ function tenAlerts() {
 }
 
 function fiftyAlerts() {
-  if (onexactive == 1) {
+  if (onexactivated == 1) {
     alert("You've unlocked something...");
           log.innerText = "2 achievements unlocked! \n Energy Earner, Rank 2 (Earn 50 energy), \n Upgrader, Rank 1 (Upgrade any power plant) \n \n";
           alert("You used your energy to upgrade the power plant.");
           counter -= 50;
           alert("Your friends and family support you helping the Earth. They fund you with 100 energy.");
           counter += 100;
+    onexactivated += 1;
   }
   else {
     console.log("Waiting for alerts...");
@@ -104,12 +112,13 @@ function fiftyAlerts() {
 }
 
 function twofiftyAlerts() {
-  if (onexactive == 2) {
+  if (onexactivated == 2) {
     alert("You've unlocked something...");
           log.innerText = "Rank increased! \n Rank 2 --> Rank 3 \n Achievement Unlocked! \n Energy Earner, Rank 3 (Earn 250 energy) \n Achievement Unlocked! \n Restorer, Rank 1 (Restore 2 power plants) \n \n";
           alert("You restored another power plant!");
           counter -= 250;
           alert("The new power plant produces you 4 energy per second!");
+    onexactivated += 1;
   }
   else {
     console.log("Waiting for alerts...");
