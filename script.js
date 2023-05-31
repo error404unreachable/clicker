@@ -47,10 +47,6 @@ function checkAlerts() {
   }
 }
 
-function welcomeUser() {
-  alert("Welcome to Save the Earth... \n Start by tapping the Earth \n Upgrades will be automatic. \n Good luck!");
-}
-
 function tenUpgrades() {
   if (onexactive == 0) {
     clearInterval(myInterval);
