@@ -15,10 +15,9 @@ function welcomeUser() {
 			notification.style.display = 'none';
 		}, 10000);
   
-}
-
 // Get the text element
 var textElement = document.getElementById("notification");
 
 // Save the text to local storage
 localStorage.setItem("savedText", textElement.innerText);
+}
