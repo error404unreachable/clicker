@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #notification-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+#notification-message {
+  font-size: 16px;
+  text-align: center;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="notification-banner">
+  <p id="notification-message">This is a notification message.</p>
+</div>
+    <script>
+      // Show the notification banner
+function showNotification(message) {
+  var banner = document.getElementById("notification-banner");
+  var messageElement = document.getElementById("notification-message");
+  messageElement.innerText = message;
+  banner.style.display = "block";
+}
+
+// Hide the notification banner
+function hideNotification() {
+  var banner = document.getElementById("notification-banner");
+  banner.style.display = "none";
+}
+
+// Example usage
+showNotification("This is a notification message.");
+setTimeout(hideNotification, 5000); // Hide the banner after 5 seconds
+
+    </script>
+  </body>
+</html>
