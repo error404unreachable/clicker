@@ -4,13 +4,21 @@
     <style>
       #notification-banner {
   position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
-  width: 100%;
-  background-color: #f44336;
+  width: 100  background-color: #f44336;
   color: white;
   padding: 10px;
   display: none;
+  transition: top 0.5s ease-in-out;
+}
+
+#notification-banner.show {
+  top 0;
+}
+
+#notification-banner.hide {
+  top: -100px;
 }
 
 #notification-message {
@@ -30,13 +38,15 @@ function showNotification(message) {
   var banner = document.getElementById("notification-banner");
   var messageElement = document.getElementById("notification-message");
   messageElement.innerText = message;
-  banner.style.display = "block";
+  banner.classList.add("show");
+  banner.classList.remove("hide");
 }
 
 // Hide the notification banner
 function hideNotification() {
   var banner = document.getElementById("notification-banner");
-  banner.style.display = "none";
+  banner.classList.add("hide");
+  banner.classList.remove("show");
 }
 
 // Example usage
