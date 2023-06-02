@@ -7,6 +7,10 @@ let log = document.getElementById("log-input");
 let element = document.getElementById("button");
 let myInterval;
 
+function welcomeUser() {
+  alert("Welcome to Save the Earth! \n Start By tapping the Earth. \n Earn energy. \n Upgrades will be automatic. \n Good Luck!");
+}
+
 element.addEventListener("click", addScore);
 
 function addScore() {
