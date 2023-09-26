@@ -1,6 +1,7 @@
 let score = localStorage.getItem("savedScore");
 let first = "locked";
 let second = "locked";
+let amount = document.getElementById("score");
 
 function welcomeUser() {
    alert("Welcome to Earth Clicker!");
@@ -9,6 +10,7 @@ function welcomeUser() {
 
 function addScore() {
    score = score + 1;
+   amount.innerText = score;
 }
 
 function checkUpgrades() {
