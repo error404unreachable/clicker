@@ -1,4 +1,4 @@
-let score = 0;
+let score = localStorage.getItem("savedScore");
 let first = "locked";
 let second = "locked";
 
@@ -9,7 +9,6 @@ function welcomeUser() {
 
 function addScore() {
    score = score + 1;
-   saveScore();
 }
 
 function checkUpgrades() {
@@ -21,7 +20,9 @@ function checkUpgrades() {
         if second = "locked" {
            if score >= 500 {
               unlockSecond();
-           }
+           } else {
+                console.error("No u");
+             }
         }
      }
 }
@@ -32,4 +33,8 @@ function unlockFirst() {
 
 function unlockSecond() {
    second = "unlocked";
+}
+
+function saveScore() {
+   localStorage.setItem("savedScore", score);
 }
