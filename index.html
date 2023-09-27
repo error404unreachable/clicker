@@ -6,8 +6,20 @@
     </style>
   </head>
   <body>
+    <button type="button" onclick="startPage()">Proceed</button>
+    <p id="hidden"></p>
     <script>
-      
+      function startPage() {
+       var code = prompt("Please enter your password");
+         if (code = 404) {
+           if (confirm("Password Accepted.\nWould you like to proceed?") == true) { 
+             window.location.href = "main.html";
+           } else {
+             document.getElementById("hidden").innerText = "Your password is: 404";
+           }
+         } else {
+           alert("Incorrect.");
+         }
     </script>
   </body>
 </html>
