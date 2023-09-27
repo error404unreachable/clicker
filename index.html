@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      
-    </style>
-  </head>
-  <body>
-    <button type="button" onclick="startPage()">Proceed</button>
-    <p id="hidden"></p>
-    <script>
-      function startPage() {
-         if (prompt("Please enter your password") = 404) {
-           if (confirm("Password Accepted.\nWould you like to proceed?") == true) { 
-             window.location.href = "main.html";
-           } else {
-             document.getElementById("hidden").innerText = "Your password is: 404";
-           }
-         } else {
-           alert("Incorrect.");
-         }
-    </script>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="login">
+			<h1>Login</h1>
+			<form action="authenticate.php" method="post">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</body>
 </html>
