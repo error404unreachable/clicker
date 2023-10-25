@@ -16,7 +16,7 @@ function addScore() {
 function checkUpgrades() {
    if (first = "locked") {
       if (score >= 50) {
-         unlockFirst();
+         first = "unlocked";
       } 
    } else {
         if (second = "locked") {
@@ -27,10 +27,6 @@ function checkUpgrades() {
              }
         }
      }
-}
-
-function unlockFirst() {
-   first = "unlocked";
 }
 
 function unlockSecond() {
