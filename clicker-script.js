@@ -21,16 +21,12 @@ function checkUpgrades() {
    } else {
         if (second = "locked") {
            if (score >= 500) {
-              unlockSecond();
+              second = "unlocked";
            } else {
                 console.error("Error");
              }
         }
      }
-}
-
-function unlockSecond() {
-   second = "unlocked";
 }
 
 function saveScore() {
