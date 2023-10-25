@@ -17,13 +17,15 @@ function checkUpgrades() {
    if (first == "locked") {
       if (score >= 50) {
          first = "unlocked";
+         firstInterval();
       } 
    } else {
         if (second == "locked") {
            if (score >= 500) {
               second = "unlocked";
+              secondInterval();
            } else {
-                console.error("Error");
+                console.error("locked");
              }
         }
      }
@@ -31,4 +33,14 @@ function checkUpgrades() {
 
 function saveScore() {
    localStorage.setItem("savedScore", score);
+}
+
+function firstInterval() {
+    clearInterval(myInterval);
+    myInterval = setInterval(addScore, 2000);
+}
+
+function secondInterval() {
+    clearInterval(mySecondInterval);
+    mySecondInterval = setInterval(addScore, 1000);
 }
