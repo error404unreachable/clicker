@@ -11,6 +11,7 @@ function welcomeUser() {
 function addScore() {
    score += 1;
    display.innerText = score;
+   checkUpgrades();
 }
 
 function checkUpgrades() {
