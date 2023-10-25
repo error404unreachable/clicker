@@ -14,13 +14,13 @@ function addScore() {
 }
 
 function checkUpgrades() {
-   if first = "locked" {
-      if score >= 50 {
+   if (first = "locked") {
+      if (score >= 50) {
          unlockFirst();
       } 
    } else {
-        if second = "locked" {
-           if score >= 500 {
+        if (second = "locked") {
+           if (score >= 500) {
               unlockSecond();
            } else {
                 console.error("Error");
