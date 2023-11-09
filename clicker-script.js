@@ -14,10 +14,8 @@ function welcomeUser() {
 function addScore() {
    score += 1;
    display.innerText = score;
-   checkUpgrades();
 }
 
-function checkUpgrades() {
    if (first == "locked") {
       if (score >= 50) {
          first = "unlocked";
@@ -33,11 +31,10 @@ function checkUpgrades() {
              }
         }
      }
-}
 
-function saveScore() {
+/*function saveScore() {
    localStorage.setItem("savedScore", score);
-}
+}*/
 
 function firstInterval() {
     clearInterval(myInterval);
