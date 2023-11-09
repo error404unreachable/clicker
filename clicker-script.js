@@ -3,8 +3,8 @@ var first = "locked";
 var second = "locked";
 var display = document.getElementById("score");
 var log = document.getElementById("log-input");
-let myInterval;
-let mySecondInterval;
+var myInterval;
+var mySecondInterval;
 
 function welcomeUser() {
    alert("Welcome to Earth Clicker!");
