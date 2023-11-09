@@ -27,7 +27,7 @@ function addScore() {
               second = "unlocked";
               secondInterval();
            } else {
-                console.error("locked");
+               log.innerText = "less than 500";
              }
         }
      }
