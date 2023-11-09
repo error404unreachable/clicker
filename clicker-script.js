@@ -2,7 +2,7 @@ var score = 0; //localStorage.getItem("savedScore");
 var first = "locked";
 var second = "locked";
 var display = document.getElementById("score");
-var log = document.getElementById("log");
+var log = document.getElementById("log-input");
 
 function welcomeUser() {
    alert("Welcome to Earth Clicker!");
