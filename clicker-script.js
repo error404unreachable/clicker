@@ -2,6 +2,7 @@ var score = 0; //localStorage.getItem("savedScore");
 var first = "locked";
 var second = "locked";
 var display = document.getElementById("score");
+var log = document.getElementById("log");
 
 function welcomeUser() {
    alert("Welcome to Earth Clicker!");
@@ -39,9 +40,11 @@ function saveScore() {
 function firstInterval() {
     clearInterval(myInterval);
     myInterval = setInterval(addScore, 2000);
+   log.innerHTML = "1st interval";
 }
 
 function secondInterval() {
     clearInterval(mySecondInterval);
     mySecondInterval = setInterval(addScore, 1000);
+    log.innerHTML = "2nd interval";
 }
