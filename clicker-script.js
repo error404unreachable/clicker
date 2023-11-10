@@ -14,8 +14,10 @@ function welcomeUser() {
 function addScore() {
    score += 1;
    display.innerText = score;
+   checkUpgrades();
 }
 
+function checkUpgrades() {
    if (first == "locked") {
       if (score >= 50) {
          first = "unlocked";
@@ -31,6 +33,7 @@ function addScore() {
              }
         }
      }
+}
 
 /*function saveScore() {
    localStorage.setItem("savedScore", score);
@@ -38,12 +41,20 @@ function addScore() {
 
 function firstInterval() {
     clearInterval(myInterval);
-    myInterval = setInterval(addScore, 2000);
+    myInterval = setInterval(autoClicker, 2000);
    log.innerHTML = "1st interval";
 }
 
 function secondInterval() {
     clearInterval(mySecondInterval);
-    mySecondInterval = setInterval(addScore, 1000);
+    mySecondInterval = setInterval(secondAutoClicker, 1000);
     log.innerHTML = "2nd interval";
+}
+
+function autoClicker() {
+   score += 1;
+}
+
+function secondAutoClicker() {
+   score += 1;
 }
