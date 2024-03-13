@@ -22,6 +22,7 @@ function checkUpgrades() {
       if (score >= 50) {
          first = "unlocked";
          firstInterval();
+         log.innerText = "Unlocked Miniature Solar Panel; +1 Energy / 2 Seconds";
       } 
    } else {
         if (second == "locked") {
@@ -29,7 +30,7 @@ function checkUpgrades() {
               second = "unlocked";
               secondInterval();
            } else {
-               log.innerText = "Unlocked 'Miniature Solar Panel' +1 energy / 2 seconds \n";
+               console.log("Less than 500");
              }
         }
      }
