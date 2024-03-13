@@ -65,13 +65,13 @@ html, body {
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
   }
   
   #log-input {
     border: 0.1px solid white;
     border-radius: 10%;
-    padding: 5px;
+    padding: 15px;
     background-color: black;
     color: white;
     font-size: 15px;
