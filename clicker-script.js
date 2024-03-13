@@ -29,7 +29,7 @@ function checkUpgrades() {
               second = "unlocked";
               secondInterval();
            } else {
-               log.innerText = "less than 500";
+               log.innerText = "Unlocked 'Miniature Solar Panel' +1 energy / 2 seconds \n";
              }
         }
      }
@@ -42,19 +42,19 @@ function checkUpgrades() {
 function firstInterval() {
     clearInterval(myInterval);
     myInterval = setInterval(autoClicker, 2000);
-   log.innerHTML = "1st interval";
 }
 
 function secondInterval() {
     clearInterval(mySecondInterval);
     mySecondInterval = setInterval(secondAutoClicker, 1000);
-    log.innerHTML = "2nd interval";
 }
 
 function autoClicker() {
    score += 1;
+   display.innerText = score;
 }
 
 function secondAutoClicker() {
    score += 1;
+   display.innerText = score;
 }
