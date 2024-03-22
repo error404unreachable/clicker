@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>You can't go here!</title>	
+	<title>You can't go here!</title>
+		<style>
+			body {
+				background-color: black;
+			}
+		</style>
 	</head>
 	<body>
-		<button onclick="if (prompt('Enter password') == 404) { window.location.href = 'main.html'; } else { alert('incorrect'); }" type="button" style="margin-left: auto; margin-right: auto; padding: 62px; color: white; background-color: black;">Proceed</button>
+		<button onclick="if (prompt('Enter password') == 404) { window.location.href = 'main.html'; } else { alert('incorrect'); }" type="button" style="margin-left: auto; margin-right: auto; padding: 62px; font-size: 42px; color: white; background-color: black; border-radius: 30%;">Proceed</button>
 	</body>
 </html>
