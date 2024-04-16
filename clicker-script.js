@@ -5,16 +5,21 @@ var display = document.getElementById("score");
 var log = document.getElementById("log-input");
 var myInterval;
 var mySecondInterval;
+var storage = 0;
 
-if (typeof(Storage) !== "undefined") {
-  // Code for localStorage/sessionStorage.
-} else {
-  // Sorry! No Web Storage support..
+function storageCheck() {
+ if (typeof(Storage) !== "undefined") {
+  storage == "on";
+ } else {
+  storage == "off";
+  alert("Local Storage function error... \n Unable to store session data...");
+ }
 }
 
 function welcomeUser() {
    alert("Welcome to Earth Clicker!");
    alert("Start by tapping the Earth. \n Acheivements can be found in the log. \n Upgrades are automatic. \n \n Good Luck!");
+   storageCheck();
 }
 
 function addScore() {
