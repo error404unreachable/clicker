@@ -8,7 +8,7 @@ var mySecondInterval;
 var storage = 0;
 
 function storageCheck() {
- if (typeof(Storage) !== "undefined") {
+ if (typeof(Storage) != "undefined") {
   storage == "on";
   alert("Local Storage Functioning...");
  } else {
