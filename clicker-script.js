@@ -10,6 +10,7 @@ var storage = 0;
 function storageCheck() {
  if (typeof(Storage) !== "undefined") {
   storage == "on";
+  alert("Local Storage Functioning...");
  } else {
   storage == "off";
   alert("Local Storage function error... \n Unable to store session data...");
