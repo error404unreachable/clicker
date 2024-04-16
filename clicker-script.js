@@ -6,6 +6,12 @@ var log = document.getElementById("log-input");
 var myInterval;
 var mySecondInterval;
 
+if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support..
+}
+
 function welcomeUser() {
    alert("Welcome to Earth Clicker!");
    alert("Start by tapping the Earth. \n Acheivements can be found in the log. \n Upgrades are automatic. \n \n Good Luck!");
