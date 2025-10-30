@@ -4,17 +4,18 @@ let onexactive = 0;
 let onexactivated = 0;
 let twox = 4;
 let log = document.getElementById("log-input");
-let element = document.getElementById("button");
+let button = document.getElementById("button");
 let myInterval;
+let multiplier = 1;
 
 function welcomeUser() {
   alert("Welcome to Save the Earth! \n Start By tapping the Earth. \n Earn energy. \n Upgrades will be automatic. \n Good Luck!");
 }
 
-element.addEventListener("click", addScore);
+button.addEventListener("click", addScore);
 
 function addScore() {
-  counter = counter + 1;
+  counter = counter + (1 * multiplier);
   document.getElementById('score').innerText = counter;
   checkUpgrades();
 }
